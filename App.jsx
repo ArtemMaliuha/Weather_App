@@ -35,7 +35,7 @@ export default function App() {
     }
 
     React.useEffect(() => {
-        fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchCity}&days=3&aqi=no&alerts=no`)
+        fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchCity}&days=3&aqi=no&alerts=no`)
             .then (res => res.json())
             .then(data => setForecastWeatherData(data))
     }, [searchCity])
@@ -48,7 +48,7 @@ export default function App() {
         const endDate = new Date(today);
         endDate.setDate(today.getDate() - 1);
         const end_dt = endDate.toISOString().split('T')[0];
-        fetch(`http://api.weatherapi.com/v1/history.json?key=${API_KEY}&q=${searchCity}&dt=${dt}&end_dt=${end_dt}`)
+        fetch(`https://api.weatherapi.com/v1/history.json?key=${API_KEY}&q=${searchCity}&dt=${dt}&end_dt=${end_dt}`)
             .then(res => res.json())
             .then(data => setHistoryWeatherData(data))
     }, [searchCity])
