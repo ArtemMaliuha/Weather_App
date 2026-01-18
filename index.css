@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #8fd0ef, #b3e1f0);
+  min-height: 100vh;
+  margin: 0;
+  background-repeat: no-repeat;
+}
+
+.weather-app{
+  display: flex;
+  justify-content: center;
+}
+
+.history-section, .forecast-section{
+  height: 100vh;
+  width: 300px;
+}
+
+.history-section{
+  margin-right: 20px;
+}
+
+.forecast-section{
+  margin-left: 20px;
+}
+
+.section-title-history,
+.section-title-forecast{
+  font-family: "Inter";
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+  margin-top: 20px;
+}
+
+.section-subtitle{
+  margin-top: 2px;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  height: 17px;
+}
+
+.section-title-history{
+  margin-bottom: 33px;
+}
+
+.current-weather-section{
+  width: 600px;
+  margin-top: 15px;
+}
+
+.search-section > button{
+  width: 100px;
+  margin-left: 10px;
+  background-color: #2c83d1;
+  color: white;
+}
+
+.search-section > input{
+  width: 490px;
+  padding-left: 7px;
+}
+
+.search-section > input,
+.search-section > button{
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.weather-card {
+  margin-top: 40px;
+  height: auto;
+  width: 600px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.main-info{
+  background-color: #dbeef3;
+  width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
+  & .temperature {
+    font-size: 100px;
+    font-family: "Inter";
+    font-weight: 600;  
+    letter-spacing: -4px;   
+    line-height: 1;         
+    margin: 10px 0 0 0;         
+    color: #000;
+  }
+
+  & .weather-condition{
+    margin: 0;
+    font-size: 30px;
+    font-family: "Inter";
+    font-weight: 500;
+    padding-bottom: 24px;
+  }
+}
+
+.location-container{
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+}
+
+.location-container > p{
+  font-size: 50px;
+  margin: 0 0 0 10px;
+  font-weight: 700;
+  font-family: "Inter";
+}
+
+.details-row{
+  display: flex;
+  width: 600px;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: 2px solid #ccc;
+  height: 80px;
+
+  & .wind{
+    border-left: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+
+  }
+
+  & .feels-like,
+  .wind,
+  .humidity{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+.detail-label, 
+.detail-value {
+  margin: 0;
+  font-family: "Inter";
+}
+
+.daily-weather{
+  background-color: white;
+  width: 300px;
+  height: 85px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dw-date-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  justify-content: start;
+  min-width: 60px;  
+  margin-left: 12px;
+  width: 80px;
+  
+  & .day-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  margin-top: 12px;
+  }
+
+  & .day-icon{
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.dw-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-left: 15px; 
+
+  & .temperature {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap; 
+  margin-top: 10px;
+  }
+
+  & .condition {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  margin: 12px 0 0 0; 
+  }
+}
+
+.see-more{
+  width: 300px;
+  background-color: #2c83d1;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+.return-button{
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  background-color: #e0f0fd;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  font-family: "Inter";
+  font-weight: 500;
+}
+
+
+.details-container{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+
+  & .details-header{
+  font-family: "Inter";
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+}
+
+.day-accordion{
+  background-color: white;
+  margin: 8px 40px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  display: inline;
+
+  & summary{
+    font-family: "Inter";
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+}
+
+.accordion-table{
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+
+  & th, & td {
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;;
+  }
+
+  & th{
+    width: 160px;
+    text-align: start;
+    font-family: "Inter";
+  }
+
+  & td {
+    text-align: center;
+    font-family: "Inter";
+  }
+}
